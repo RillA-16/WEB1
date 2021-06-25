@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mousemove로 자유롭게 그리기</title>
+</head>
+
+<body onload="init()">
+    <h3>mousemove로 자유롭게 그리세요</h3>
+    <hr>
+
+    <table>
+        <tr>
+            <td><label>선 굵기 : <input id="border" type="number" onchange="setting()"></label></td>
+            <td><label>선 색 : <input id="color" type="color" onchange="setting()"></label></td>
+        </tr>
+    </table>
+    <canvas id="myCanvas" style="background-color:aliceblue" width="400" height="300">
+    </canvas>
+    <script>
+        var canvas, context;
+        var lineWidth, color;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            context = canvas.getContext("2d");
+           
+            
+            canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+            canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+            canvas.addEventListener("mouseover", function (e) { over(e) }, false);
+        }
+
+        var startX = 0, startY = 0;
+        var curX = 0, curY = 0;
+
+        function draw(curX, curY) {
+            context.beginPath();
+            context.moveTo(startX, startY);
+            context.lineTo(curX, curY);
+            context.stroke();
+        }
+
+        function over(e) {
+            startX = e.offsetX; startY = e.offsetY;
+            // setting();
+        }
+
+        function move(e) {
+            curX = e.offsetX;
+            curY = e.offsetY;
+            draw(curX, curY);
+            startX = curX; startY = curY;
+        }
+
+        function out(e) {
+            setting();
+        }
+
+        function setting() {
+            lineWidth = document.getElementById("border").value;
+            color = document.getElementById("color").value;
+           
+            context.lineWidth = lineWidth;
+            context.strokeStyle = color;
+
+        }
+    </script>
+</body>
+
+</html>

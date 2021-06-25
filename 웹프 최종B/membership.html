@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>membership</title>
+    <meta charset="utf-8">
+    <style>
+        @import url(prac.css);
+
+        .login {
+            border: cornflowerblue 2px solid;
+            box-shadow: 8px 8px 10px gray;
+            text-align: center;
+            height: 100%;
+            width: 80%;
+            margin-left: 10%;
+            animation: fadeIn 3s;
+        }
+
+        #text1 {
+            font-size: 70px;
+            color: #D2E3FD;
+            font-family: ms_bold;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        #text2 {
+            font-size: 20px;
+            color: #DADCE8;
+            font-family: ms_light;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        #text1,
+        #text2 {
+            display: inline-block;
+        }
+
+        .id,
+        .pw,
+        .name,
+        .email {
+            border: 2px #DADCE8 solid;
+            color: gray;
+            border-radius: 15px;
+            outline: none;
+            height: 40px;
+            width: 380px;
+            text-align: center;
+            font-size: 15px;
+            font-family: ms_light;
+        }
+
+        .lb {
+            color: gray;
+        }
+        .lb input{
+            text-align: center;
+        }
+
+        .yy,
+        .dd,
+        .mm {
+            border: #747171;
+            border: 2px #DADCE8 solid;
+            border-radius: 15px;
+            outline: none;
+            color: #747171;
+            height: 40px;
+            background: none;
+            width: 100;
+        }
+
+        .button {
+            height: 40px;
+            width: 260px;
+            background-color: cornflowerblue;
+            border-radius: 9px;
+            border: cornflowerblue 1px solid;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            outline: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-right: 2%;
+            text-align: right;
+            font-family: ms_light;
+        }
+
+        input:focus::-webkit-input-placeholder,
+        textarea:focus::-webkit-input-placeholder {
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><span id="main"><a href="Main.html" style="text-align: center;" target="_self">Memory</a></li>
+            </span><br>
+            <li><a href="About.html" target="_self">About</a></li>
+            <li><a href="Login.html" target="_self" style="color: white;">Login</a></li>
+            <li><a href="Category.html" target="_self">Category</a></li>
+            <li><a href="MyList.html" target="_self">MyList</a></li>
+        </ul>
+    </nav>
+    <section class="right">
+        <header>
+            <h1>&#108; </h1> Membership
+        </header>
+        <div class="login">
+            <header>
+                <div id="text1">Memory</div>
+                <div id="text2">Sign up</div>
+            </header>
+            <section>
+                <form method="POST" action="">
+                    <label class="lb">아이디<br>
+                        <input type="text" maxlength="30" value="" class="id">
+                    </label><br><br>
+                    <label class="lb">비밀번호<br>
+                        <input type="password" maxlength="30" value="" class="pw" id="pw1">
+                    </label><br><br>
+                    <label class="lb">비밀번호 재확인<br>
+                        <input type="password" maxlength="30" value="" class="pw" id="pw2">
+                    </label><br><br>
+                    <label class="lb">이름<br>
+                        <input type="text" maxlength="15" value="" class="name">
+                    </label><br><br>
+                    <label class="lb">이메일<br>
+                        <input type="email" maxlength="30" value="" class="email" placeholder="123@naver.com">
+                    </label><br><br>
+                    <label class="lb">생년월일<br>
+                        <span>
+                            <input type="text" maxlength="4" value="" class="yy" placeholder="YY">
+                        </span>
+                        <span>
+                            <select class="mm">
+                                <option>월</option>
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">4</option>
+                                <option value="05">5</option>
+                                <option value="06">6</option>
+                                <option value="07">7</option>
+                                <option value="08">8</option>
+                                <option value="09">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </span>
+                        <span>
+                            <input type="text" maxlength="2" value="" class="dd" placeholder="일">
+                        </span>
+                    </label>
+                    <br><button type="submit" class="button" style="height:48px; width: 270px;">Sumbmit</button><br>
+                </form>
+            </section>
+        </div>
+    </section>
+    <footer class="footer">
+        <div> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현, 최선정</div>
+        <footer> </section>
+</body>
+
+</html>

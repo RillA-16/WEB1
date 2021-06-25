@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>카페·디저트</title>
+    <style>
+        @import url(prac.css);
+
+        #category ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 25px;
+            font-family: ms_bold;
+        }
+
+        #category ul li {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        .right>header>h1,
+        .right>header {
+            color: black;
+        }
+
+        .right>header>h1,
+        .right>header,
+        #category {
+            display: inline-block;
+        }
+
+        #category>ul {
+            word-spacing: 40px;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #category ul li a:hover {
+            color: cornflowerblue;
+        }
+
+
+        .slide>ul,
+        .slide>ul>li {
+            list-style-type: none;
+        }
+
+        .slide {
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide>ul {
+            width: calc(100%*4);
+            display: flex;
+            transition: 1s;
+        }
+
+        .slide li {
+            width: calc(100%/4);
+            height: 700px;
+        }
+
+        .slide li:nth-child(1) {
+            background-image: url(media/카페1.PNG);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .slide li:nth-child(2) {
+            background-image: url(media/카페2.PNG);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .slide li:nth-child(3) {
+            background-image: url(media/카페3.PNG);
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+        }
+
+        .slide li:nth-child(4) {
+            background-image: url(media/카페4.PNG);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 10%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .button>label {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            border: 2px solid cornflowerblue;
+            display: inline-block;
+            background-color: white;
+            font-size: 0;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        #bt1:checked~.button label:nth-child(1),
+        #bt2:checked~.button label:nth-child(2),
+        #bt3:checked~.button label:nth-child(3),
+        #bt4:checked~.button label:nth-child(4) {
+            background-color: cornflowerblue;
+        }
+
+        #bt1:checked~ul {
+            margin-left: 0;
+        }
+
+        #bt2:checked~ul {
+            margin-left: -100%;
+        }
+
+        #bt3:checked~ul {
+            margin-left: -200%;
+        }
+
+        #bt4:checked~ul {
+            margin-left: -300%;
+        }
+
+        .slide input {
+            display: none;
+        }
+
+        .login {
+            animation: fadeIn 3s;
+        }
+
+        .login {
+            border: cornflowerblue 2px solid;
+            height: 650px;
+            width: 1000px;
+            margin-left: 10%;
+            margin-bottom: 20%;
+            box-shadow: 8px 8px 10px gray;
+        }
+
+        .slide>ul>li>a {
+            list-style-type: none;
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            font-family: ms_light;
+            margin: 10%;
+
+        }
+
+        #category ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 25px;
+            font-family: ms_light;
+        }
+
+        #category ul li {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        .right>header>h1,
+        .right>header {
+            color: black;
+        }
+
+        .right>header>h1,
+        .right>header,
+        #category {
+            display: inline-block;
+        }
+
+        #category>ul {
+            word-spacing: 40px;
+        }
+
+        .footer {
+            text-align: right;
+            font-family: ms_light;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><span id="main"><a href="Main.html" style="text-align: center;" target="_self">Memory</a></li>
+            </span><br>
+            <li><a href="About.html" target="_self">About</a></li>
+            <li><a href="Login.html" target="_self">Login</a></li>
+            <li><a href="Category.html" target="_self" style="color: white;">Category</a></li>
+            <li><a href="MyList.html" target="_self">MyList</a></li>
+        </ul>
+    </nav>
+    <section class="right">
+        <header>
+            <h1>&#108; </h1> Category
+        </header>
+        <nav id="category">
+            <ul>
+                <li><a href="한식.html">한식</a></li>
+                <li><a href="일식.html">일식</a></li>
+                <li><a href="양식.html">양식</a></li>
+                <li><a href="중식.html">중식</a></li>
+                <li><a href="분식.html">분식</a></li>
+                <li><a href="카페·디저트.html">카페·디저트</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <div class="slide">
+                <input type="radio" name="bt" id="bt1" checked>
+                <input type="radio" name="bt" id="bt2">
+                <input type="radio" name="bt" id="bt3">
+                <input type="radio" name="bt" id="bt4">
+                <ul>
+                    <li><a href="앵두네.html" target="_self">앵두네 과자점</a></li>
+                    <li><a href="하우디.html" target="_self">하우디</a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+                <p class="button">
+                    <label for="bt1">1</label>
+                    <label for="bt2">2</label>
+                    <label for="bt3">3</label>
+                    <label for="bt4">4</label>
+                </p>
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer class="footer">
+        <div> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현, 최선정</div>
+        <div>모든 사진 출처는 명지 월드(myongji_world)에 있음을 알려드립니다.</div>
+        <footer>
+</body>
+
+</html>

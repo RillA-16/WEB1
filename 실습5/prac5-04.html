@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>text-shadow와 box-shadow</title>
+	<style>
+		div.multiple {
+			text-align: center;
+			color: yellow;
+			text-shadow: 2px 2px 2px black,
+				0 0 10px blue, 0 0 5px darkblue;
+		}
+
+		img:hover {
+			box-shadow: 2px 2px 2px blue,
+				0 0 10px blue,
+				0 0 5px blue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="multiple">
+		<h2>Most Visited Pages</h2>
+	</div>
+	<hr>
+	<table>
+		<tr>
+			<td>
+				<div class="img"><img src="media/naver.png"></div>
+			</td>
+			<td>
+				<div class="img"><img src="media/chosun.png"></div>
+			</td>
+			<td>
+				<div class="img"><img src="media/amazon.png"></div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

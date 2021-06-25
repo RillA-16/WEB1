@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <meta charset="utf-8">
+    <style>
+        @import url(prac.css);
+
+        .lt1 {
+            font-family: ms_light;
+            font-size: 20px;
+            margin-left: 14%;
+            margin-top: 14%;
+            margin-bottom: 10%;
+            animation: fadeIn 6s;
+        }
+
+        .lt2 {
+            font-family: ms_light;
+            font-size: 18px;
+            margin-left: 14%;
+            margin-bottom: 22%;
+            animation: fadeIn 10s;
+        }
+
+        .footer {
+            text-align: right;
+            font-family: ms_light;
+            margin-right: 2%;
+        }
+        #p4{
+            margin-bottom: 80px;
+        }
+    </style>
+    <script>
+        function init(){
+            p1 = document.getElementById("p1");
+            p2 = document.getElementById("p2");
+            p3 = document.getElementById("p3");
+            p4 = document.getElementById("p4");
+    
+            p1.addEventListener("mouseover",over1);
+            p1.addEventListener("mouseout",out1);
+    
+            p2.addEventListener("mouseover",over2);
+            p2.addEventListener("mouseout",out2);
+    
+            p3.addEventListener("mouseover",over3);
+            p3.addEventListener("mouseout",out3);
+    
+            p4.addEventListener("mouseover",over4);
+            p4.addEventListener("mouseout",out4);
+        }
+        function over1(){
+            p1.style.color ="white";
+        }
+        function over2(){
+            p2.style.color ="white";
+        }
+        function over3(){
+            p3.style.color ="white";
+        }
+        function over4(){
+            p4.style.color ="white";
+        }
+    
+        function out1(){
+            p1.style.color="black";
+        }
+        function out4(){
+            p4.style.color="black";
+        }
+        function out2(){
+            p2.style.color="black";
+        }
+        function out3(){
+            p3.style.color="black";
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <nav class="nav">
+        <ul>
+            <li><span id="main"><a href="Main.html" style="text-align: center;" target="_self">Memory</a></li>
+            </span><br>
+            <li><a href="About.html" target="_self" id="p1" style="color: white;">About</a></li>
+            <li><a href="Login.html" target="_self" id="p2">Login</a></li>
+            <li><a href="Category.html" target="_self" id="p3">Category</a></li>
+            <li><a href="MyList.html" target="_self" id="p4">MyList</a></li>
+        </ul>
+    </nav>
+    <section class="right">
+        <header>
+            <h1>&#108; </h1> About
+        </header>
+        <div class="lt1">
+            다양한 카테고리와 거리뷰를 통해 사용자가 쉽게 점심 또는 저녁을 정할수 있도록 다양한 정보를 제공하는 웹사이트입니다.
+        </div>
+        <div class="lt2">
+            누구에게나 잊고 싶지 않던 시절, 평생 소장되는 20대의 기억을 memory를 통해 사람들과 선배,후배,동기 등 다양한 관계를 맺을 수 있기를 바랍니다.
+        </div>
+        <footer class="footer">
+            <div> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현, 최선정</div>
+        </footer>
+    </section>
+</body>
+
+</html>

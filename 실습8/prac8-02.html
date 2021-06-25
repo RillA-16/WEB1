@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        div [class*="col_"] {
+            float: left;
+            /* padding: 15px; */
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: green;
+        }
+
+        header .header_row {
+            background-color: rgb(238, 237, 237);
+            margin: 0 auto;
+            height: 50%;
+            width: 80%;
+        }
+
+        section {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .row1 {
+            height: 300px;
+        }
+
+        .row1 div {
+            height: 300px;
+        }
+
+        .row1 .col_9 {
+            background-color: yellow;
+        }
+
+        .row1 .col_3 {
+            background-color: skyblue;
+        }
+
+        .row2 {
+            height: 200px;
+        }
+
+        .row2 div {
+            height: 200px;
+        }
+
+        .row2 div:nth-child(1) {
+            background-color: pink;
+        }
+
+        .row2 div:nth-child(2) {
+            background-color: purple;
+        }
+
+        .row2 div:nth-child(3) {
+            background-color: pink;
+        }
+
+        .row2 div:nth-child(4) {
+            background-color: purple;
+        }
+
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: green;
+        }
+
+        footer .footer_row {
+            background-color: rgb(238, 237, 237);
+            margin: 0 auto;
+            height: 50%;
+            width: 80%;
+        }
+
+        .col_1 {
+            width: 8.33%;
+        }
+
+        .col_2 {
+            width: 16.66%;
+        }
+
+        .col_3 {
+            width: 25%;
+        }
+
+        .col_4 {
+            width: 33.33%;
+        }
+
+        .col_5 {
+            width: 41.66%;
+        }
+
+        .col_6 {
+            width: 50%;
+        }
+
+        .col_7 {
+            width: 58.33%;
+        }
+
+        .col_8 {
+            width: 66.66%;
+        }
+
+        .col_9 {
+            width: 75%;
+        }
+
+        .col_10 {
+            width: 83.33%;
+        }
+
+        .col_11 {
+            width: 91.66%;
+        }
+
+        .col_12 {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header_row">헤더</div>
+    </header>
+    <section>
+        <div class="row1">
+            <div class="col_9">요소</div>
+            <div class="col_3">요소</div>
+        </div>
+        <div class="row2">
+            <div class="col_3">요소</div>
+            <div class="col_3">요소</div>
+            <div class="col_3">요소</div>
+            <div class="col_3">요소</div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_row">푸터</div>
+    </footer>
+</body>
+
+</html>

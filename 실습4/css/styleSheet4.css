@@ -1,0 +1,20 @@
+.main{
+    background-color: paleturquoise;
+}
+.headline {
+    color: rgb(179, 37, 2);
+    text-align: center;
+}
+
+div.help {
+    color: blue;
+    font: bold;
+}
+
+p.help {
+    color: red;
+    font-size:  25px;
+}
+#hot{
+    background-color: orange;
+}

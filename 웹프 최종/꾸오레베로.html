@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>꾸오레베로</title>
+<style>
+@import url(prac.css);
+
+.back{
+    background-color:#CBDCF4;
+    border: #747A90 solid 2px;
+    margin-left: 275px;
+    margin-bottom: 50px;
+    margin-top: 0;
+    margin-right: 275px;
+}
+.inside{
+    padding: 3px;
+    margin: 5px;
+    text-align: center;
+    background-color: white;
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 3;
+        transform: none;
+    }
+}
+.back,.inside{
+    animation: fadein 3s;
+}
+
+.ifm{
+    line-height: 50px;
+}
+.ifm>header{
+    font-family: ms_bold;
+    font-size: 25px;
+}
+.right>header,.right>p{
+    display: inline-block;
+}
+.bt{
+    color: grey;
+    border: white solid 1px;
+    text-decoration: none;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+}
+.bt:active{
+    color: yellow;
+}
+.footer{
+    text-align: right;
+    font-family: ms_light;
+}
+</style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><span id="main"><a  href="Main.html" style="text-align: center;" target="_self">Memory</a></li></span><br>
+            <li><a href="About.html" target="_self">About</a></li>
+            <li><a href="Login.html" target="_self">Login</a></li>
+            <li><a href="Category.html" target="_self" style="color: white;">Category</a></li>
+            <li><a href="MyList.html" target="_self">MyList</a></li>
+        </ul>
+    </nav>
+
+    <section class="right">
+        <header><h1>&#108; </h1>꾸오레베로</header>
+        <p><input type="button" value="&#9733;" class="bt" ></p>
+            <section class="back">
+                <div class="inside">
+                    <section class="category">
+                        <img src="media/중식2.PNG" height="400px" width="800px">
+                    </section>
+                    <section class="ifm">
+                        <header>꾸오레베로</header>  
+                            <span>명지대 정문과 명지대 삼거리 사이에 있는 4거리에서 CU 편이점을 끼고 골목으로 100미터 정도 직진하시면 파스타가
+                                정말 맛있는 집이라는 입간판이 보이실꺼에요. 거기가 바로 꾸오레베로 입니다~
+                            </span>
+                            <p>피자와 파스타가 정말 맜있는 이탈리아 레스토랑입니다.
+                                <br> 주문과 동시에 면을 직접 삶아 보다 맛있는 파스타를 맛보실 수 있습니다.<BR>
+                                    분위기에 한번, 맛에 한번 놀라 꼭 다시오고 싶은 가게가 될 것을 약속합니다.<br>
+                                    어서들 와보세요~~ 감사합니다.
+                            </p>
+                            <p>
+                                &#128681; 0507-1419-4770<br>
+                                평일 : 11:30 - 22:00
+                            </p>
+                    </section>
+                    <footer>
+                        <p>
+                            사진 출처 : 명지월드
+                        </p>
+                    </footer>
+                </div>
+            </section>
+    </section>
+    <footer class="footer">
+        <div> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현, 최선정</div>
+        <div>모든 사진 출처는 명지 월드(myongji_world)에 있음을 알려드립니다.</div>
+    <footer>
+</body>
+</html>

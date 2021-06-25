@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>태현이네 민박</title>
+    <style>
+        @font-face {
+            font-family: 'BM';
+            src: url(media/BMJUA_ttf.ttf);
+        }
+
+        div [class*="col_"] {
+            float: left;
+            /* padding: 15px; */
+        }
+
+        .col_1 {
+            width: 8.33%;
+        }
+
+        .col_2 {
+            width: 16.66%;
+        }
+
+        .col_3 {
+            width: 25%;
+        }
+
+        .col_4 {
+            width: 33.33%;
+        }
+
+        .col_5 {
+            width: 41.66%;
+        }
+
+        .col_6 {
+            width: 50%;
+        }
+
+        .col_7 {
+            width: 58.33%;
+        }
+
+        .col_8 {
+            width: 66.66%;
+        }
+
+        .col_9 {
+            width: 75%;
+        }
+
+        .col_10 {
+            width: 83.33%;
+        }
+
+        .col_11 {
+            width: 91.66%;
+        }
+
+        .col_12 {
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'BM';
+        }
+
+        body {
+            background-color: black;
+        }
+
+        nav {
+            display: block;
+            /* background-color: white; */
+            /* 여기 고쳐용~ */
+            width: 90%;
+            height: 60px;
+            margin-left: 9%;
+            margin-top: 1%;
+        }
+
+        .top ul {
+            display: inline-block;
+            list-style: none;
+            padding-left: 0;
+            padding-top: 0;
+            height: 50px;
+        }
+
+        .nav_left {
+            float: left;
+            margin-left: 1%;
+        }
+
+        .nav_right {
+            float: right;
+            margin-right: 5%;
+        }
+
+        .top ul li {
+            display: inline-block;
+        }
+
+        .top ul li a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .top ul li a:hover {
+            color: rgb(245, 208, 47);
+        }
+
+        #menuImage {
+            display: none;
+        }
+
+        a.left {
+            font-size: 38px;
+        }
+
+        a.right {
+            font-size: 20px;
+        }
+
+        .mainImage {
+            width: 90%;
+            display: block;
+            margin-left: 9%;
+            padding-bottom: 0%;
+            padding-top: 0%;
+        }
+
+        .mainImage img {
+            width: 1200px;
+            height: auto;
+            border-radius: 2px;
+        }
+
+        .container {
+            display: flex;
+            /* justify-content: space-around; */
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        #item {
+            /* max-width: 100%; */
+            margin-top: 1%;
+            padding: 10px;
+        }
+
+        .container img {
+            max-width: 100%;
+        }
+
+        .container ul {
+            list-style: none;
+        }
+
+        .container ul li {
+            color: white;
+        }
+
+        footer {
+            display: block;
+            width: 80%;
+            margin-left: 12%;
+            height: auto;
+            margin-top: 2%;
+            padding-bottom: 3%;
+        }
+
+        footer div {
+            float: left;
+            width: 100%;
+        }
+
+        footer div p {
+            color: white;
+        }
+
+        #footer_right p {
+            float: right;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            header {
+                width: 100%;
+            }
+
+            .nav_right {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+
+            #menuImage {
+                display: inline-block;
+            }
+
+            #footer_left {
+                width: 100%;
+            }
+
+            #footer_right {
+                width: 100%;
+            }
+
+            .container {
+                /* flex-wrap: wrap; */
+                display: block;
+                width: 90%;
+            }
+
+            .col_3 {
+                width: 45%;
+            }
+
+            #item {
+                width: 45%;
+                height: 350px;
+                }
+
+            .mainImage {
+                width: 100%;
+            }
+
+            .mainImage img {
+                width: 100%;
+                height: auto;
+                border-radius: 2px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            header {
+                width: 100%;
+            }
+
+            .nav_right {
+                /* display: none; */
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            }
+
+            #menuImage {
+                display: inline-block;
+            }
+
+            #footer_left {
+                width: 100%;
+            }
+
+            #footer_right {
+                width: 100%;
+            }
+
+            .container {
+                /* flex-wrap: wrap; */
+                display: block;
+            }
+
+            #item {
+                width: 100%;
+            }
+
+            .mainImage {
+                width: 100%;
+            }
+
+            .mainImage img {
+                width: 100%;
+                height: auto;
+                border-radius: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="top">
+            <ul class="nav_left">
+                <li><img src="media/moonIcon.png" width="50px" height="50px"></li>
+                <li><a href="Main.html" class="left" target="_self">태현이네 민박</a></li>
+                <!-- <li><a>&nbsp;&nbsp;&nbsp;</a></li> -->
+                <li id="menuImage"><img src="media/menu.png" width="40px" height="40px"></li>
+            </ul>
+            <ul class="nav_right">
+                <li><a href="" class="right" target="_self">&#108; Information</a></li>
+                <li><a href="" class="right" target="_self">&#108; Room</a></li>
+                <li><a href="ReservationIndex.html" class="right" target="_self">&#108; Reservation</a></li>
+                <li><a href="" class="right" target="_self">&#108; Road</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="mainImage">
+            <img src="media/mainImage.jpg">
+        </div>
+        <div class="container">
+            <div class="col_3" id="item">
+                <ul>
+                    <li><img src="media/namyeesum.jpg"></li>
+                    <li>&#108; 남이섬</li><br>
+                    <li>북한강에 떠 있는 반달 모양의 남이섬은 원래 섬이 아니였으나, 청평댐이 세워지면서 주위가 물에 작며 섬이 되었다. 동쪽으로는 새덕산, 서쪽으로 불기산, 앞쪽으로는 굽이 도는
+                        북한강 줄기가 어우러진 그림같이 아름다운 섬이다</li>
+                </ul>
+            </div>
+            <div class="col_3" id="item">
+                <ul>
+                    <li><img src="media/아침고요수목원.png"></li>
+                    <li>&#108; 아침고요수목원</li><br>
+                    <li>단순히 여러 종류의 나무와 꽃을 가져다 심어 놓은 것이 아니라 원예미학적인 관점에서 주제를 가지고 정원을 꾸며 놓었다.</li>
+                </ul>
+            </div>
+            <div class="col_3" id="item">
+                <ul>
+                    <li><img src="media/짚라인.jpg"></li>
+                    <li>&#108; 짚라인</li><br>
+                    <li>2010년 11월 아시아 최대규모를 자랑하며 개장한 스카이라인 짚와이어는 포스코A&C의 강구조 철계시공능력과 미국 테라노바사의 시스템이 있었기에 가능하였으며 가평군,
+                        경기관광공사, 주식회사 남이섬이 친환경 관광시설의 보급을 위해 공동으로 출자하여 설립한 자나라인 주식회사(제3섹터 공사합동법인)가 운영 및 보급을 담당하게 됨으로
+                        완성되었습니다.</li>
+                </ul>
+            </div>
+            <div class="col_3" id="item">
+                <ul>
+                    <li><img src="media/사륜바이크.jpg"></li>
+                    <li>&#108; 사륜바이크</li><br>
+                    <li>ATV (All Terrain Vehicle)는 산악바이크 또는 사륜바이크라고도 불리며 어떤 험한 길이라도 달릴 수 있다는 의미를 가지고 있는 오프로드용 바이크입니다.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr width="85%" style="margin-left: 8%;">
+    </section>
+    <footer>
+        <div class="col_3" id="footer_left">
+            <p>태현이네 민박</p><br>
+            <p>Tel : 010 - 4163 - 3856</p>
+        </div>
+        <div class="col_9" id="footer_right">
+            <p>회사소개 &#108; 개인정보처리방침 &#108; 이용약관 &#108; 제휴안내</p><br>
+            <p>&nbsp;</p><br>
+            <p>주소 : 경기도 가평군 OOO OOO 216</p><br>
+            <p>E-mail : gogo589@naver.com</p><br>
+            <p> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현</p>
+        </div>
+    </footer>
+</body>
+
+</html>

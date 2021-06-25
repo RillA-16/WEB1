@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main</title>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'ms_bold';
+            src: url(media/Maplestory\ Bold.ttf);
+        }
+
+        @font-face {
+            font-family: 'ms_light';
+            src: url(media/Maplestory\ Light.ttf);
+        }
+
+        body {
+            background-image: url(media/찐배경.PNG);
+            background-size: 100%;
+        }
+
+        .inside {
+            background-color: cornflowerblue;
+            margin: 150px;
+            border-left: cornflowerblue 4px solid;
+            border-top: cornflowerblue 4px solid;
+        }
+
+        #menubar,
+        .inside>img,
+        .main {
+            display: inline-block;
+        }
+
+        #menubar ul li {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        #menubar ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: ms_light;
+
+        }
+
+        #menubar {
+            text-align: right;
+            vertical-align: top;
+        }
+
+        #menubar ul {
+            word-spacing: 80px;
+            margin-left: 120px;
+        }
+
+        #main {
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+            text-align: left;
+            font-size: 100px;
+        }
+
+        #main>li>span>a {
+            font-family: ms_bold;
+        }
+
+        .wrap {
+            position: relative;
+        }
+
+        #sc {
+            position: absolute;
+            top: 0%;
+            left: 30%;
+        }
+
+        .search {
+            width: 250px;
+            height: 50px;
+            border-radius: 30px;
+            border: 5px white solid;
+            margin-top: 1em;
+            outline: none;
+            text-align: center;
+
+            background-color: transparent;
+            color: white;
+        }
+
+        .search_bt {
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            border: 3px solid white;
+            outline: none;
+            background-color: white;
+            color: #C2E1F3;
+            font-family: ms_bold;
+        }
+
+        .map {
+            border-radius: 30px;
+            width: 40px;
+            height: 30px;
+            border: 2px solid white;
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 50%;
+            right: 15%;
+        }
+
+        .map>span>a {
+            text-decoration: none;
+            outline: none;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var available = ["앵두네과자점", "꾸오레베로", "락희안", "우리할매떡볶이", "아쯔다무라", "하루앤소쿠", "주인백파스타", "하우디", "베가보쌈", "삼겹베네", "희원"];
+            $(".search").autocomplete({
+                source: available,
+                select: function (event, ui) {
+                    console.log(ui.item);
+                },
+                focus: function (event, ui) {
+                    return false;
+                }
+            });
+        });
+
+        function GetCookie(name) {
+            var str = name + "=";
+            var pairs = document.cookie.split(";"); // 쿠키문자열을 ;을 경계로 분할
+
+            for (var i = 0; i < pairs.length; i++) {
+                var pair = pairs[i].trim(); // 쿠키 앞뒤의 빈칸 제거, trim 문자열 공백 제거
+                var unit = pair.split("="); // "="기준으로 split
+
+                if (unit[0] == name)
+                    return unescape(unit[1]); // unescape는 쿠키 문자열과 충돌을 막기위해 사용, 16진수 문자열로 변경
+            }
+            return null;
+        }
+
+        function SetCookie(name, value, expireDate) {
+            var expire = new Date(); // 현재 시간
+            expire.setTime(expire.getTime() + (expireDate * 24 * 60 * 60 * 1000));
+
+            // 쿠키 연결
+            document.cookie = name + '=' + value + ';expires=' + expire.toUTCString() + ';path=/';
+
+            if (count == 10) {
+                alert("10회 방문자 입니다! 축하합니다");
+            } else if (count == 100) {
+                alert("100회 방문자 입니다! 축하합니다");
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+    <div class="wrap">
+        <div class="inside">
+            <img src="media/main_1.jpg" height="600px" width="700px">
+            <nav id="menubar">
+                <ul>
+                    <li><a href="About.html" target="_self">About</a></li>
+                    <li><a href="Login.html" target="_self">Login</a></li>
+                    <li><a href="Category.html" target="_self">Category</a></li>
+                    <li><a href="MyLIst.html" target="_self">&#9733;MyList</a></li>
+                    <script>
+                        // var username = GetCookie("username");
+                        var count = GetCookie("count");
+                        count++;
+                        SetCookie("count", count, 1);
+
+                        document.write('<li><a>' + count + '번째방문</a><li>');
+                    </script>
+                </ul>
+                <ul id="main">
+                    <li><span><a href="Main.html" target="_self">Memory</a></span></li>
+                </ul>
+                <div class="map"><span><a href="Main_map.html" target="_self">map&nbsp</a></span></div>
+            </nav>
+        </div>
+        <div id="sc">
+            <input type="search" class="search">
+            <button type="submit" value="" class="search_bt">Q</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

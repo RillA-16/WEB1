@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Maplestory_bold';
+    src: url(media/Maplestory\ Bold.ttf);
+}
+@font-face {
+    font-family: 'Maplestory_light';
+    src: url(media/Maplestory\ Light.ttf);
+}
+body{
+    background-color: #E9F1F4;
+    font-family: Maplestory_bold;
+}
+#menubar ul li{
+    display: inline-block;
+    list-style-type: none;
+    
+}
+#menubar ul li a{
+    color: #747171;
+    text-decoration: none;
+}
+.back{
+    background-color: #DADCE8;
+    border: #747A90 solid 2px;
+    padding: 7px;
+    margin: 10px;
+}
+.inside{
+    background-color: white;
+    padding: 3px;
+    margin: 5px;
+    text-align: center;
+    padding-bottom: 100%;
+}
+#login{
+    float: right;
+    margin-right: 20px;
+}

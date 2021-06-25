@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>주인백 파스타</title>
+<style>
+@import url(prac.css);
+
+.back{
+    background-color:#CBDCF4;
+    border: #747A90 solid 2px;
+    margin-left: 100px;
+    margin-bottom: 5px;
+    margin-right: 700px;
+}
+.inside{
+    padding: 3px;
+    margin: 5px;
+    text-align: center;
+    background-color: white;
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 3;
+        transform: none;
+    }
+}
+.back,.inside{
+    animation: fadein 3s;
+}
+
+.ifm{
+    line-height: 50px;
+}
+.ifm>header{
+    font-family: ms_bold;
+    font-size: 25px;
+}
+.right>header,.right>p{
+    display: inline-block;
+}
+.bt{
+    color: grey;
+    border: white solid 1px;
+    text-decoration: none;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+}
+.bt:active{
+    color: yellow;
+}
+.footer{
+    text-align: right;
+    font-family: ms_light;
+}
+#myCanvas{
+    position: absolute;
+    top: 240px;
+    right: 100px;
+}
+@media(max-width:1500px){
+    #myCanvas{
+    display: none;
+    }
+}
+.nav{
+    padding-bottom: 80px;
+}
+</style>
+</head>
+<body onload="init()">
+    <nav class="nav">
+        <ul>
+            <li><span id="main"><a  href="Main.html" style="text-align: center;" target="_self">Memory</a></li></span><br>
+            <li><a href="About.html" target="_self">About</a></li>
+            <li><a href="Login.html" target="_self">Login</a></li>
+            <li><a href="Category.html" target="_self" style="color: white;">Category</a></li>
+            <li><a href="MyList.html" target="_self">MyList</a></li>
+        </ul>
+    </nav>
+
+    <section class="right">
+        <header><h1>&#108; </h1>주인백 파스타</header>
+        <p><input type="button" value="&#9733;" class="bt" ></p>
+            <section class="back">
+                <div class="inside">
+                    <section class="category">
+                        <img src="media/양식4.PNG" height="250px" width="450px">
+                    </section>
+                    <section class="ifm">
+                        <header>주인백 파스타</header>  
+                            <span>남가좌동 맛집 2008년에 시작한 주인백 파스타 입니다.</span>
+                            <p>5성급 모텔 출신 주방장들이 정성껏 요리하는 백씨 가문 파스타 맛집입니다.
+                            </p>
+                            <p>대학가답게 가성비짱짱핫플레이스로 맛있게 간지나게 파스타 드시러 오세요<br>
+                                &#128681; 0507- 1401 - 9640<br>
+                                평일 10:30 - 22:00<br>
+                                주말 10:30 - 22:00
+                            </p>
+                    </section>
+                    <footer>
+                        <p>
+                            사진 출처 : 명지월드
+                        </p>
+                    </footer>
+                </div>
+            </section>
+    
+    <footer class="footer">
+        <div> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현, 최선정</div>
+        <div>모든 사진 출처는 명지 월드(myongji_world)에 있음을 알려드립니다.</div>
+    </footer>
+    <canvas id="myCanvas" width="500" height="740" style="background-color:aliceblue; border:cornflowerblue 2px solid;"></canvas>
+    </section>
+    <script>
+        var canvas, context;
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            context = canvas.getContext("2d");
+            context.lineWidth = 2; 
+            context.strokeStyle = "blue";
+            canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+            canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+            canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+            canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+            }
+        var startX=0, startY=0; 
+        var dragging=false;
+        function draw(curX, curY) { 
+            context.beginPath();
+            context.moveTo(startX, startY);
+            context.lineTo(curX, curY);
+            context.stroke();
+        }
+        function down(e) { 
+            startX = e.offsetX; startY = e.offsetY; dragging = true;
+        }
+        function up(e) { dragging = false; }
+        function move(e) {
+        if(!dragging) return; 
+            var curX = e.offsetX, curY = e.offsetY;
+            draw(curX, curY);
+            startX = curX; startY = curY;
+        }
+        function out(e) { dragging = false; }
+    </script>
+</body>
+</html>

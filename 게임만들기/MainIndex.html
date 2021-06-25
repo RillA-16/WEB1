@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<style>
+    @font-face {
+        font-family: 'ms_bold';
+        src: url(media/Maplestory\ Bold.ttf);
+    }
+
+    .contain {
+        margin: 5% calc(calc(100% - 650px)/2);
+        width: 650px;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card img {
+        margin: 3px;
+    }
+
+    p {
+        font-family: 'ms_bold';
+        font-size: 30px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>하트 찾기 게임</title>
+    <script>
+        var planktonArray = new Array(16);
+        var failSelectedNum;
+        var clickCount = 0;
+
+        function init() {
+            createCard();
+            createRandom();
+        }
+
+        // 카드 뒷면 생성
+        function createCard() {
+
+            var obj = document.getElementsByClassName("card")[0];
+
+            for (var i = 0; i < 16; i++) {
+                var cardImg = document.createElement("img");
+                cardImg.src = "media/스폰지밥 뒷면.png";
+                cardImg.className = "card";
+                cardImg.id = i;
+                cardImg.count = i + 1;
+                cardImg.style.width = "150px";
+                cardImg.style.height = "150px";
+                cardImg.addEventListener("click", open);
+                obj.appendChild(cardImg);
+            }
+            console.log(cardImg);
+        }
+
+        // 카드 배열 난수 생성
+        function createRandom() {
+            var randomNum = Math.floor(Math.random() * 16);
+            this.failSelectedNum = randomNum;
+            for (var t = 0; t < planktonArray.length; t++) {
+                if (t == randomNum) {
+                    planktonArray[t] = 1;
+                } else {
+                    planktonArray[t] = 0;
+                }
+            }
+            console.log(randomNum);
+        }
+        console.log(planktonArray);
+
+        // 성공
+        function open(e) {
+            clickCount++;
+            var hi = e.target;
+            var card = document.getElementsByClassName("card");
+
+            if (planktonArray[hi.id] == 1) {
+                // 성공
+                alert("딩동댕!");
+                for (var i = 0; i < planktonArray.length + 1; i++) {
+                    // planktonArray[i].removeEventListener("click", open);
+                    card[i].src = "media/스폰지밥.png";
+                }
+            } else {
+                // 실패
+                alert("땡!");
+                e.target.src = "media/플랑크톤.png";
+                card[hi.count].removeEventListener("click", open);
+                if (clickCount == 15) {
+                    for (var i = 0; i < planktonArray.length; i++) {
+                        card[i].src = "media/플랑크톤.png";
+                    }
+                    alert("15회 실패! 이게뭐람?!");
+                }
+            }
+
+        }
+
+        function remove() {
+            var obj = document.getElementsByClassName("card")[0];
+            var obj1 = document.getElementsByTagName("img");
+
+            for (var t = planktonArray.length - 1; t >= 0; t--) {
+                obj.removeChild(obj1[t]);
+            }
+        }
+
+        function reset() {
+            clickCount = 0;
+            remove();
+            init();
+        }
+
+    </script>
+</head>
+
+<body onload="init()">
+    <div class="contain">
+        <p>스폰지밥을 찾아라!</p>
+        <div class="card">
+
+        </div>
+        <button type="button" onclick="reset()">Game Reset</button>
+    </div>
+</body>
+
+</html>

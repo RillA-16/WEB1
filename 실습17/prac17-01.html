@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>폼으로 도형 그리기</title>
+    <style>
+        td {
+            text-align: right;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        canvas {
+            background-color: rgb(224, 241, 247);
+        }
+    </style>
+    <script>
+        var canvas, context;
+
+        function draw() {
+            canvas = document.getElementById("canvas1");
+            context = canvas.getContext("2d");
+
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var width = document.getElementById("width").value;
+            var height = document.getElementById("height").value;
+            var color = document.getElementById("lineColor").value;
+            var lineWidth1 = document.getElementById("border").value;
+
+            context.beginPath();
+            context.strokeStyle = color;
+            context.lineWidth = lineWidth1;
+            context.rect(x, y, width, height);
+            context.stroke();
+        }
+
+        function erase() {
+            var canvas = document.getElementById("canvas1");
+            var context = canvas.getContext("2d");
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>폼으로 사각형 그리기</h3>
+    <hr>
+
+    <table>
+        <tr>
+            <td><label>x <input id="x" type="number"></label></td>
+            <td><label>y <input id="y" type="number"></label></td>
+        </tr>
+        <tr>
+            <td><label>width <input id="width" type="number"></label></td>
+            <td><label>height <input id="height" type="number"></label></td>
+        </tr>
+        <tr>
+            <td><label>선 굵기 <input id="border" type="number"></label></td>
+            <td><label>선색 <input id="lineColor" type="color"></label></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="draw" onclick="draw()">그리기</button></td>
+            <td><button type="button" id="erase" onclick="erase()">지우기</button></td>
+        </tr>
+    </table>
+
+    <canvas id="canvas1" width="500" height="200"></canvas>
+
+</body>
+
+</html>

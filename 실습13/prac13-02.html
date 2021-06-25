@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>16개의 CSS3 색이름과 색</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 100px;
+            padding: 10px;
+            /* /  background-color: rgb(red, green, blue); */
+        }
+    </style>
+</head>
+
+<body>
+    <h3>16개의 CSS3 색이름과 색</h3>
+    <hr>
+    <script>
+        var rgbRed;
+        var rgbGreen;
+        var rgbBlue;
+        var str = new Array();
+
+        for (i = 0; i < 16; i++) {
+            rgbRed = Math.floor(Math.random() * 256);
+            rgbGreen = Math.floor(Math.random() * 256);
+            rgbBlue = Math.floor(Math.random() * 256);
+            str[i] = ["rgb(" + rgbRed + ", " + rgbGreen + ", " + rgbBlue + ")"];
+        }
+
+        for (t = 0; t < 16; t++) {
+            document.write("<div style = 'background-color: " + str[t] + "'>" + str[t] + "</div>");
+        }
+    </script>
+</body>
+
+</html>

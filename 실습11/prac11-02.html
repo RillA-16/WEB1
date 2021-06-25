@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>큰 자리수와 낮은자리수</title>
+</head>
+
+<body>
+    <h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+    <hr>
+    <script>
+        var number = prompt("숫자 입력");
+        var number1 =number;
+        var a = number % 10;
+        var b =0;
+        while (number != 0) {
+            b = number % 10;
+            number = Math.floor(number / 10);
+        }
+        if (b == a) {
+            document.write(number1 + " : 같음");
+        } else{
+            document.write(number1 + " : 다름")  
+        }
+
+
+
+    </script>
+</body>
+
+</html>

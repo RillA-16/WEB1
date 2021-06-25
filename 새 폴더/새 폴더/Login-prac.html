@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Prac</title>
+<style>
+    body{
+        background-color: #E9F1EF;
+    }
+    #menubar ul li{
+        display: inline-block;
+        list-style-type:none;
+    }
+    #menubar ul li a{
+        color: #747171;
+        text-decoration: none;
+    }
+    #login{
+        float: right;
+        margin-right: 20px;
+    }
+    .inside>header>p{   
+        font-size: 60px;
+        color: #C2E1F3;
+    }
+    .inside>section>a{
+        background-color: #C2E1F3;
+        font-size: 13px;
+        color: white;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 104px;
+        padding-right: 104px;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+    .inside>section>input{
+        margin: 5px;
+    }
+    .back{
+        background-color: #DADCE8;
+        border: #747A90 solid 2px;
+        padding: 7px;
+        margin:100px 500px; 
+    }
+    .inside{
+        background-color: white;
+        text-align: center;
+        margin: 5px;
+        padding: 3px;
+        padding-bottom: 100px;
+        
+    }
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to{
+            opacity: 3;
+            transform: none;
+        }
+    }
+    .back,.inside{
+        animation: fadeIn 3s;
+    }
+    .id,.pw{
+        border: #747171;
+        border: 1px #747A90 solid;
+        border-radius: 15px;
+        outline: none;
+        color:#747171;
+        height: 40px;
+        background:none;
+        width: 260px;
+        text-align: center;
+    }
+    .button{
+        height: 40px;
+        width: 260px;
+        background-color: #C2E1F3;
+        border: white solid 1px;
+        border-radius: 3px;
+        color: white;
+        margin-bottom: 18px;
+        margin-top: 7px;
+        outline: none;
+    }
+
+
+</style>
+</head>
+<body>
+    <header>
+        <nav id="menubar">
+            <ul>
+                <li><a href="Main.html"> Memory </a></li>
+                <li><a href ="찜리스트.html" target="_blank">&nbsp;&nbsp; 찜 리스트 </a></li>
+                <li><a href="내 별점.html" target="_blank">&nbsp;&nbsp;&#9733;내 별점 </a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="back">
+        <div class="inside">
+            <header>
+                <p>Memory</p>
+            </header>
+            <section>
+                <input type="text" size="20" name="User_id" placeholder="아이디" class="id"><br>
+                <input type="pass" name="User_pw" placeholder="비밀번호" class="pw"><br>
+                <button type="submit" class="button"
+                >로그인</button><br>
+                <a href="회원가입.html" target="_blank" >회원가입</a>                
+            </section>
+        </div>
+    </section>
+</body>
+</html>

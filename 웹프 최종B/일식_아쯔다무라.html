@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>아쯔다무라</title>
+    <style>
+        @import url(prac.css);
+
+        .back{
+            background-color:#CBDCF4;
+            border: #747A90 solid 2px;
+            margin-left: 100px;
+            margin-bottom: 5px;
+            margin-right: 700px;
+        }
+
+        .inside {
+            padding: 3px;
+            margin: 5px;
+            text-align: center;
+            background-color: white;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 3;
+                transform: none;
+            }
+        }
+
+        .back,
+        .inside {
+            animation: fadein 3s;
+        }
+
+        .ifm {
+            line-height: 40px;
+        }
+
+        .ifm>header {
+            font-family: ms_bold;
+            font-size: 25px;
+        }
+
+        .footer {
+            text-align: right;
+            font-family: ms_light;
+        }
+        #myCanvas{
+            position: absolute;
+            top: 240px;
+            right: 100px;
+        }
+        @media(max-width:1500px){
+            #myCanvas{
+            display: none;
+            }
+        }
+        .nav{
+            padding-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <nav class="nav">
+        <ul>
+            <li><span id="main"><a href="Main.html" style="text-align: center;" target="_self">Memory</a></li>
+            </span><br>
+            <li><a href="About.html" target="_self">About</a></li>
+            <li><a href="Login.html" target="_self">Login</a></li>
+            <li><a href="Category.html" target="_self" style="color: white;">Category</a></li>
+            <li><a href="MyList.html" target="_self">MyList</a></li>
+        </ul>
+    </nav>
+
+    <section class="right">
+        <header>
+            <h1>&#108; </h1>아쯔다무라
+        </header>
+        <section class="back">
+            <div class="inside">
+                <section class="category">
+                    <img src="media/일식_아쯔다무라.jpg" height="250px" width="450px">
+                </section>
+                <section class="ifm">
+                    <header>아쯔다무라</header>
+                    <span>안녕하세요:)</span>
+                    <p>명지대 카츠 맛집!</p>
+                    <p>메뉴 : 우동(6000원) / 안심카츠(8000원) / 치즈카츠(8000원) / 모듬카츠(9000원) </p>
+                    <p>OPEN : 11:30 - 22:00 <br>  breakTime : 15:00 - 17:00</p>
+                </section>
+                <footer>
+                    <p>
+                        사진 출처 : 명지월드
+                    </p>
+                </footer>
+            </div>
+        </section>
+    <footer class="footer">
+        <div> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현, 최선정</div>
+        <div>모든 사진 출처는 명지 월드(myongji_world)에 있음을 알려드립니다.</div>
+    </footer>
+    <canvas id="myCanvas" width="500" height="570" style="background-color:aliceblue; border:cornflowerblue 2px solid;"></canvas>
+        </section>
+        <script>
+            var canvas, context;
+            function init() {
+                canvas = document.getElementById("myCanvas");
+                context = canvas.getContext("2d");
+                context.lineWidth = 2; 
+                context.strokeStyle = "blue";
+                canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+                canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+                canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+                canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+                }
+            var startX=0, startY=0; 
+            var dragging=false;
+            function draw(curX, curY) { 
+                context.beginPath();
+                context.moveTo(startX, startY);
+                context.lineTo(curX, curY);
+                context.stroke();
+            }
+            function down(e) { 
+                startX = e.offsetX; startY = e.offsetY; dragging = true;
+            }
+            function up(e) { dragging = false; }
+            function move(e) {
+            if(!dragging) return; 
+                var curX = e.offsetX, curY = e.offsetY;
+                draw(curX, curY);
+                startX = curX; startY = curY;
+            }
+            function out(e) { dragging = false; }
+        </script>
+</body>
+</html>

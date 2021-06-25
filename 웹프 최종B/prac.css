@@ -1,0 +1,127 @@
+/*폰트*/
+@font-face {
+    font-family: 'ms_bold';
+    src: url(media/Maplestory\ Bold.ttf);
+}
+@font-face {
+    font-family: 'ms_light';
+    src: url(media/Maplestory\ Light.ttf);
+}
+/*fade In 애니메이션*/
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 3;
+        transform: 5s;
+    }
+}
+
+/*여백 0으로 둠 - 화면 꽉차게 하기 위함*/
+*{
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+/*메뉴바와 다른 태그들이 등장할 right를 table-cell로 나눔*/
+.nav,.right{
+    display: table-cell; 
+}
+.header{
+    color: white;
+    background-color: cornflowerblue;
+    width: 250px;
+    text-align: center;
+   
+}
+.nav{
+    background-color: cornflowerblue;
+    width:250px;
+    line-height: 100px;/*텍스트 줄 간격 조정*/
+}
+
+.nav ul li{
+    display: block;
+    list-style-type: none;
+    font-size: 25px;
+    text-align: right;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    font-family: 필기체;
+    
+}
+.nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0.5em 2em;
+}
+.nav ul li a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    line-height: 4em;
+    position: relative;
+    text-decoration: none;
+}
+
+.right>p{
+    font-size: 60px;
+}
+#main>a{
+    color: white;
+    font-family: ms_bold;
+    font-size: 60px;
+    font-style: italic;
+    line-height: 150px;
+    padding: 0.3em;
+}
+
+.right>header{
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-left: 10%;
+    font-family: 필기체;
+}
+.right>header>h1, .right>header{
+    display: inline-block;
+}
+.right>header>h1{
+    font-size: 80px;
+    font-family: monospace;
+}
+.right{
+    width: 100%;
+    height: 100%;
+}
+.nav ul li a:hover{
+    color: white;
+}
+/* 메뉴바 애니메이션 적용*/
+/*.nav *{
+    box-sizing: border-box;
+    transition: all 0.35s linear;
+}*/
+/*메뉴바 애니메이션 적용*/
+/*.nav::after{
+    transition: all 0.35s linear;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: rotateX(0deg);
+    transform: rotateX(0deg);
+    left: 0;
+}
+nav.li:hover a, .nav li.current a{
+    transform: rotateX(360deg);
+    color: transparent;
+}
+.nav li:hover a::after, .nav li :current a::after{
+    opacity: 1;
+}*/

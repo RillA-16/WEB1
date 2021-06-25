@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>워커 태스크 만들기</title>
+	<script>
+		var worker = null;
+
+		function startWorkTask() {
+			// 워커 태스크를 생성하고 calcMultiple.js를 실행하도록 지시
+			console.log("히잉");
+			worker = new Worker("calcMultiple.js")
+		}
+
+		function calculate() {
+			if (worker == null) {
+				alert("워커 태스크가 만들어지지 않았음");
+				return; // 어떤 문제가 있는 상태
+			}
+
+			var parmeters = {
+				first: document.getElementById("op1").value,
+				second: document.getElementById("op2").value
+			};
+			worker.postMessage(parmeters);
+
+			worker.onmessage = function (e) {
+				document.getElementById("result").value = e.data;
+			}
+		}
+
+	</script>
+</head>
+
+<body onload="startWorkTask()">
+	<h3>곱셈하기</h3>
+	<hr>
+	<form>
+		<input id="op1" type="number" value="0"> x
+		<input id="op2" type="number" value="0">
+		<input type="button" onclick="calculate()" value="곱하기">
+		<input id="result" type="text" value="0">
+	</form>
+</body>
+
+</html>

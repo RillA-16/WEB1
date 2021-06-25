@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        @font-face {
+            font-family: 'BM';
+            src: url(media/BMJUA_ttf.ttf);
+        }
+
+        body {
+            background-color: black;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'BM';
+        }
+
+        header {
+            display: none;
+        }
+
+        /* 
+        header {
+            display: block;
+            margin-top: 1%;
+            width: 100%;
+            position: relative;
+        }
+
+        header .image {
+            position: absolute;
+            margin-left: 12%;
+        }
+
+        header .word {
+            margin-left: 37%;
+            padding-top: 18%;
+            position: absolute;
+            color: rgb(223, 197, 51);
+            font-size: 60px;
+
+            padding: 5px 10px;
+            background-color: yellow;
+            text-align: center;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+
+        section {
+            /* position: absolute; */
+            display: block;
+            width: 75%;
+            margin-left: 12%;
+        }
+
+        section .section_header {
+            position: relative;
+        }
+
+        .image img {
+            margin-top: 1%;
+            width: 100%;
+        }
+
+        .section_header .word {
+            position: absolute;
+            color: rgb(223, 197, 51);
+            font-size: 4vW;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-content: center;
+        }
+
+        .container {
+            display: flex;
+            /* height: 500px; */
+        }
+
+        .calendar {
+            margin-top: 1%;
+            /* float: left; */
+            width: 66.6%;
+        }
+
+        .calendar p {
+            text-align: center;
+            margin-bottom: 1%;
+            font-size: 2vw;
+            color: white;
+        }
+
+        .calendar table {
+            display: table;
+            table-layout: fixed;
+            padding: 2%;
+            border-collapse: collapse;
+            width: 90%;
+            height: 500px;
+        }
+
+        td {
+            color: white;
+        }
+
+        th {
+            color: white;
+        }
+
+        td:nth-child(1) {
+            color: red;
+        }
+
+        th:nth-child(1) {
+            color: red;
+        }
+
+        td:nth-child(7) {
+            color: rgb(38, 109, 240);
+        }
+
+        th:nth-child(7) {
+            color: rgb(38, 109, 240);
+        }
+
+
+        table thead {
+            text-align: center;
+        }
+
+        table tbody {
+            vertical-align: top;
+        }
+
+        .calendar table,
+        th,
+        td {
+            border: 1px solid white;
+            font-size: 1vW;
+        }
+
+        .side {
+            margin-top: 1%;
+            /* float: left; */
+            width: 33.3%;
+        }
+
+        .top {
+            margin-top: 5%;
+            height: 50%;
+        }
+
+        .bottom {
+            height: 50%;
+            margin-top: 9%;
+        }
+
+        .side .top p {
+            font-size: 2vw;
+            color: white;
+        }
+
+        .top ul {
+            list-style: square;
+            font-size: 1vW;
+            color: white;
+        }
+
+        .bottom p {
+            font-size: 2vW;
+            color: white;
+        }
+
+        .bottom ul {
+            font-size: 1vW;
+            color: white;
+        }
+
+        .col_3 {
+            width: 25%;
+        }
+
+        .col_9 {
+            width: 75%;
+        }
+
+        footer {
+            display: none;
+            /* width: 90%; */
+            margin-left: 12%;
+            /* height: auto; */
+        }
+
+        /* #footer_right {
+            margin-right: 8%;
+        } */
+
+        footer div p {
+            color: white;
+        }
+
+        /* #footer_right p {
+            float: right;
+        } */
+
+        @media screen and (max-width: 767px) {
+            header {
+                display: block;
+                width: 100%;
+                /* margin-left: 8%; */
+            }
+
+            nav {
+                display: block;
+                /* background-color: white; */
+                /* 여기 고쳐용~ */
+                width: 100%;
+                height: 60px;
+                margin-left: 9%;
+                margin-top: 1%;
+            }
+
+            .header_top ul {
+                display: inline-block;
+                list-style: none;
+                padding-left: 0;
+                padding-top: 0;
+                height: 50px;
+            }
+
+            .nav_left {
+                float: left;
+                margin-left: 1%;
+            }
+
+            .nav_right {
+                float: right;
+                margin-right: 5%;
+            }
+
+            .header_top ul li {
+                display: inline-block;
+            }
+
+            .header_top ul li a {
+                color: white;
+                text-decoration: none;
+                margin: 10px;
+            }
+
+            /* .nav_right {
+                visibility: hidden;
+                width: 0;
+                height: 0;
+            } */
+
+            .nav_right li a {
+                display: none;
+            }
+
+            a.left {
+                font-size: 38px;
+            }
+
+            a.right {
+                font-size: 20px;
+            }
+
+            section {
+                margin-left: 12%;
+            }
+
+            .container {
+                display: block;
+            }
+
+            .calendar {
+                width: 100%;
+                height: 30%;
+            }
+
+            .calendar table {
+                width: 100%;
+                height: 250px;
+            }
+
+            .side {
+                width: 100%;
+                height: 30%;
+                margin-bottom: 4%;
+            }
+
+            .side ul {
+                text-align: center;
+                list-style: none;
+            }
+
+            .side p {
+                text-align: center;
+            }
+
+            footer {
+                display: block;
+                /* width: 100%; */
+                margin-top: 4%;
+                /* height: 30%; */
+            }
+
+            footer div {
+                height: 30%;
+            }
+
+            #footer_left {
+                height: 50%;
+            }
+
+            #footer_right {
+                height: 50%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            .calendar {
+                height: 500px;
+            }
+
+            .calendar table {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="header_top">
+            <ul class="nav_left">
+                <li><img src="media/moonIcon.png" width="50px" height="50px"></li>
+                <li><a href="Main.html" class="left" target="_self">태현이네 민박</a></li>
+                <!-- <li><a>&nbsp;&nbsp;&nbsp;</a></li> -->
+                <li id="menuImage"><img src="media/menu.png" width="40px" height="40px"></li>
+            </ul>
+            <ul class="nav_right">
+                <li><a href="" class="right" target="_self">&#108; Information</a></li>
+                <li><a href="" class="right" target="_self">&#108; Room</a></li>
+                <li><a href="ReservationIndex.html" class="right" target="_self">&#108; Reservation</a></li>
+                <li><a href="" class="right" target="_self">&#108; Road</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="section_header">
+            <div class="image"><img src="media/subImage.png"></div>
+            <div class="word">
+                <p>태현이네 민박 예약</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="calendar">
+                <p>6월 예약</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="side">
+                <div class="top">
+                    <p>예약 안내</p><br><br>
+                    <ul>
+                        <li>예약은 인터넷 예약, 전화예약으로 가능합니다.</li><br>
+                        <li>기준인원을 초과한 경우 1인 추가시 20,000원의 추가요금이 발생되며, 영,유아 4세이상 부터 적용됩니다.</li><br>
+                        <li>CheckIn은 15시 이후, CheckOut은 11시 입니다. 준수바랍니다</li><br>
+                        <li>예약 취소 시에는 10% 환불 위약금이 발생됩니다.</li><br>
+                        <li>성수기 -> 7월중순 ~ 8월 15일까지</li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <p>요금 안내</p><br><br>
+                    <ul>
+                        <li>안타레스(최대 20명) 500,000원</li><br>
+                        <li>시리우스(최대 4명) 200,000원</li><br>
+                        <li>폴라리스(최대 4명)250,000원</li><br>
+                        <li>베가(최대 4명) 150,000원</li><br>
+                        <li>알타이르(최대 4명)130,000원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr width="85%" style="margin-left: 8%;">
+    <footer>
+        <div id="footer_left">
+            <p>태현이네 민박</p><br>
+            <p>Tel : 010 - 4163 - 3856</p>
+        </div>
+        <div id="footer_right">
+            <p>회사소개 &#108; 개인정보처리방침 &#108; 이용약관 &#108; 제휴안내</p><br>
+            <p>&nbsp;</p><br>
+            <p>주소 : 경기도 가평군 OOO OOO 216</p><br>
+            <p>E-mail : gogo589@naver.com</p><br>
+            <p> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현</p>
+        </div>
+    </footer>
+</body>
+
+</html>

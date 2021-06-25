@@ -1,0 +1,213 @@
+<meta charset="utf-8">
+<title>Category</title>
+<style>
+    @import url(prac.css);
+
+    #category ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+        font-family: ms_bold;
+    }
+
+    #category ul li {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    .right>header>h1,
+    .right>header {
+        color: black;
+    }
+
+    .right>header>h1,
+    .right>header,
+    #category {
+        display: inline-block;
+    }
+
+    #category>ul {
+        word-spacing: 40px;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    #category ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+        font-family: ms_light;
+    }
+
+    #category ul li {
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    .right>header>h1,
+    .right>header {
+        color: black;
+    }
+
+    .right>header>h1,
+    .right>header,
+    #category {
+        display: inline-block;
+    }
+
+    #category>ul {
+        word-spacing: 40px;
+    }
+
+    #category ul li a:hover {
+        color: cornflowerblue;
+    }
+
+
+    .slide>ul,
+    .slide>ul>li {
+        list-style-type: none;
+    }
+
+    .login {
+        animation: fadeIn 3s;
+    }
+
+    .login {
+        border: cornflowerblue 2px solid;
+        height: 640px;
+        width: 1000px;
+        margin-left: 10%;
+        margin-bottom: 10%;
+        box-shadow: 8px 8px 10px gray;
+    }
+
+    @keyframes sld {
+        from {
+            margin-left: 0;
+        }
+
+        to {
+            margin-left: -300%;
+        }
+    }
+
+    .slide ul,
+    .slide ul li {
+        list-style-type: none;
+    }
+
+    .slide {
+        overflow: hidden;
+        height: 700px;
+        position: relative;
+    }
+
+    .slide ul {
+        width: calc(100%*5);
+        display: flex;
+        animation: sld 20s infinite;
+    }
+
+    .slide li {
+        width: calc(100%/5);
+        height: 700px;
+    }
+
+    .slide li:nth-child(1) {
+        background-image: url(media/카테고리1.PNG);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .slide li:nth-child(2) {
+        background-image: url(media/카테고리2.PNG);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .slide li:nth-child(3) {
+        background-image: url(media/카테고리3.PNG);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .slide li:nth-child(4) {
+        background-image: url(media/카테고리4.PNG);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .slide li:nth-child(5) {
+        background-image: url(media/카테고리5.PNG);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .login>p {
+        color: cornflowerblue;
+        font-size: 25px;
+        font-family: ms_bold;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .footer {
+        margin-right: 2%;
+        text-align: right;
+        font-family: ms_light;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><span id="main"><a href="Main.html" style="text-align: center;" target="_self">Memory</a></li>
+            </span><br>
+            <li><a href="About.html" target="_self">About</a></li>
+            <li><a href="Login.html" target="_self">Login</a></li>
+            <li><a href="Category.html" target="_self" style="color: white;">Category</a></li>
+            <li><a href="MyList.html" target="_self">MyList</a></li>
+        </ul>
+    </nav>
+    <section class="right">
+        <header>
+            <h1>&#108; </h1> Category
+        </header>
+        <nav id="category">
+            <ul>
+                <li><a href="한식.html" target="_self">한식</a></li>
+                <li><a href="일식.html" target="_self">일식</a></li>
+                <li><a href="양식.html" target="_self">양식</a></li>
+                <li><a href="중식.html" target="_self">중식</a></li>
+                <li><a href="분식.html" target="_self">분식</a></li>
+                <li><a href="카페·디저트.html" target="_self">카페·디저트</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <p>Category를 선택해주세요.</p>
+            <div class="slide">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <footer class="footer">
+            <div> Copyright &#169; 명지대학교 융합소프트웨어학부 고태현, 최선정</div>
+            <div>모든 사진 출처는 명지 월드(myongji_world)에 있음을 알려드립니다.</div>
+            <footer>
+    </section>
+
+</body>
+
+</html>
