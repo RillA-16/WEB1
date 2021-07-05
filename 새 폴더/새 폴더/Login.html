@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
-<style>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        @import url(background.css);
 
-    @import url(background.css);
+        .inside>header>p {
+            font-size: 60px;
+            color: #C2E1F3;
+        }
 
-    .inside>header>p{   
-        font-size: 60px;
-        color: #C2E1F3;
-    }
-    .inside>section>a{
-        background-color: #C2E1F3;
-        font-size: 13px;
-        color: white;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        padding-left: 104px;
-        padding-right: 104px;
-        text-decoration: none;
-        border-radius: 3px;
-    }
-    .inside>section>input{
-        margin: 5px;
-    }
-    .id{
-        border: #747171;
-        border: 1px #747A90 solid;
-        border-radius: 15px;
-        outline: none;
-        color:#747171;
-        height: 40px;
-        background:none;
-        width: 260px;
-    }
-    .pw{
-        border: #747171;
-        border: 1px #747A90 solid;
-        border-radius: 15px;
-        outline: none;
-        color:#747171;
-        height: 40px;
-        background:none;
-        width: 260px;
-    }
+        .inside>section>a {
+            background-color: #C2E1F3;
+            font-size: 13px;
+            color: white;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 104px;
+            padding-right: 104px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
 
+        .inside>section>input {
+            margin: 5px;
+        }
 
-</style>
+        .id {
+            border: #747171;
+            border: 1px #747A90 solid;
+            border-radius: 15px;
+            outline: none;
+            color: #747171;
+            height: 40px;
+            background: none;
+            width: 260px;
+        }
+
+        .pw {
+            border: #747171;
+            border: 1px #747A90 solid;
+            border-radius: 15px;
+            outline: none;
+            color: #747171;
+            height: 40px;
+            background: none;
+            width: 260px;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <nav id="menubar">
             <ul>
                 <li><a href="Main.html"> Memory </a></li>
-                <li><a href ="찜리스트.html" target="_blank">&nbsp;&nbsp; 찜 리스트 </a></li>
+                <li><a href="찜리스트.html" target="_blank">&nbsp;&nbsp; 찜 리스트 </a></li>
                 <li><a href="내 별점.html" target="_blank">&nbsp;&nbsp;&#9733;내 별점 </a></li>
             </ul>
         </nav>
@@ -67,12 +70,12 @@
             <section>
                 <input type="text" size="20" name="User_id" placeholder="아이디" class="id"><br>
                 <input type="pass" name="User_pw" placeholder="비밀번호" class="pw"><br>
-                <button type="submit" 
-                style="height: 40px; width: 260px; background-color:#C2E1F3; border: white solid 1px; border-radius: 3px; 
+                <button type="submit" style="height: 40px; width: 260px; background-color:#C2E1F3; border: white solid 1px; border-radius: 3px; 
                 color: white; margin-bottom: 18px; margin-top: 7px;">로그인</button><br>
-                <a href="회원가입.html" target="_blank" >회원가입</a>                
+                <a href="회원가입.html" target="_blank">회원가입</a>
             </section>
         </div>
     </section>
 </body>
+
 </html>
